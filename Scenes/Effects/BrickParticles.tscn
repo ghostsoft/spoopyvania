@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/rock.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Map Objects/SelfDelete.gd" type="Script" id=2]
+
+[node name="BrickParticles" type="CPUParticles2D"]
+emitting = false
+amount = 2
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+texture = ExtResource( 1 )
+emission_shape = 2
+emission_rect_extents = Vector2( 8, 8 )
+direction = Vector2( 0, -1 )
+spread = 61.36
+gravity = Vector2( 0, 60 )
+initial_velocity = 20.0
+script = ExtResource( 2 )

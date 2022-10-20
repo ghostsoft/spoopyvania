@@ -1,0 +1,205 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/UI.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/enemyHP.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/playerHP.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/UI.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/emptyHP.png" type="Texture" id=5]
+[ext_resource path="res://SpookyFont.tres" type="DynamicFont" id=6]
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource( 1 )
+playerHP = ExtResource( 3 )
+enemyHP = ExtResource( 2 )
+emptyHP = ExtResource( 5 )
+
+[node name="BG" type="TextureRect" parent="."]
+margin_top = 128.0
+margin_right = 160.0
+margin_bottom = 144.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HeartCounter" type="Label" parent="."]
+margin_left = 17.0
+margin_top = 133.0
+margin_right = 33.0
+margin_bottom = 145.0
+custom_fonts/font = ExtResource( 6 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LifeCounter" type="Label" parent="."]
+margin_left = 113.0
+margin_top = 133.0
+margin_right = 129.0
+margin_bottom = 145.0
+custom_fonts/font = ExtResource( 6 )
+text = "00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerHP" type="HBoxContainer" parent="."]
+margin_left = 17.0
+margin_top = 130.0
+margin_right = 56.0
+margin_bottom = 135.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HP1" type="TextureRect" parent="PlayerHP"]
+margin_right = 3.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP2" type="TextureRect" parent="PlayerHP"]
+margin_left = 4.0
+margin_right = 7.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP3" type="TextureRect" parent="PlayerHP"]
+margin_left = 8.0
+margin_right = 11.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP4" type="TextureRect" parent="PlayerHP"]
+margin_left = 12.0
+margin_right = 15.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP5" type="TextureRect" parent="PlayerHP"]
+margin_left = 16.0
+margin_right = 19.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP6" type="TextureRect" parent="PlayerHP"]
+margin_left = 20.0
+margin_right = 23.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP7" type="TextureRect" parent="PlayerHP"]
+margin_left = 24.0
+margin_right = 27.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP8" type="TextureRect" parent="PlayerHP"]
+margin_left = 28.0
+margin_right = 31.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP9" type="TextureRect" parent="PlayerHP"]
+margin_left = 32.0
+margin_right = 35.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="HP10" type="TextureRect" parent="PlayerHP"]
+margin_left = 36.0
+margin_right = 39.0
+margin_bottom = 5.0
+texture = ExtResource( 3 )
+stretch_mode = 3
+
+[node name="EnemyHP" type="HBoxContainer" parent="."]
+margin_left = 113.0
+margin_top = 130.0
+margin_right = 152.0
+margin_bottom = 135.0
+custom_constants/separation = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="HP1" type="TextureRect" parent="EnemyHP"]
+margin_right = 3.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP2" type="TextureRect" parent="EnemyHP"]
+margin_left = 4.0
+margin_right = 7.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP3" type="TextureRect" parent="EnemyHP"]
+margin_left = 8.0
+margin_right = 11.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP4" type="TextureRect" parent="EnemyHP"]
+margin_left = 12.0
+margin_right = 15.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP5" type="TextureRect" parent="EnemyHP"]
+margin_left = 16.0
+margin_right = 19.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP6" type="TextureRect" parent="EnemyHP"]
+margin_left = 20.0
+margin_right = 23.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP7" type="TextureRect" parent="EnemyHP"]
+margin_left = 24.0
+margin_right = 27.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP8" type="TextureRect" parent="EnemyHP"]
+margin_left = 28.0
+margin_right = 31.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP9" type="TextureRect" parent="EnemyHP"]
+margin_left = 32.0
+margin_right = 35.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3
+
+[node name="HP10" type="TextureRect" parent="EnemyHP"]
+margin_left = 36.0
+margin_right = 39.0
+margin_bottom = 5.0
+texture = ExtResource( 2 )
+stretch_mode = 3

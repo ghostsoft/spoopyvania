@@ -1,0 +1,11 @@
+# Import cache
+.import/
+export.cfg
+export_presets.cfg
+SpencersSpookyFontMONO.ttf
+SpookyFont.tres
+
+# Binaries
+bin/
+build/
+lib/

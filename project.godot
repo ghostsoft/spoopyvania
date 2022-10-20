@@ -1,0 +1,137 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "KinematicBody2D",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Scripts/Enemy/Enemy.gd"
+}, {
+"base": "Node2D",
+"class": "EnemySpawner",
+"language": "GDScript",
+"path": "res://Scripts/Map Objects/EnemySpawner.gd"
+}, {
+"base": "Node",
+"class": "EnemyState",
+"language": "GDScript",
+"path": "res://Scripts/Enemy/EnemyState.gd"
+}, {
+"base": "Node",
+"class": "EnemyStateMachine",
+"language": "GDScript",
+"path": "res://Scripts/Enemy/EnemyStateMachine.gd"
+}, {
+"base": "",
+"class": "GitAPI",
+"language": "NativeScript",
+"path": "res://addons/godot-git-plugin/git_api.gdns"
+}, {
+"base": "Area2D",
+"class": "Hitbox",
+"language": "GDScript",
+"path": "res://Scripts/Enemy/Hitbox.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Scripts/Player/Player.gd"
+}, {
+"base": "Node2D",
+"class": "StageManager",
+"language": "GDScript",
+"path": "res://Scripts/Stages/StageManager.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://Scripts/Player/State.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://Scripts/Player/StateMachine.gd"
+} ]
+_global_script_class_icons={
+"Enemy": "",
+"EnemySpawner": "",
+"EnemyState": "",
+"EnemyStateMachine": "",
+"GitAPI": "",
+"Hitbox": "",
+"Player": "",
+"StageManager": "",
+"State": "",
+"StateMachine": ""
+}
+
+[application]
+
+config/name="Spoopyvania"
+run/main_scene="res://main.tscn"
+config/icon="res://whip.png"
+
+[autoload]
+
+GameState="*res://Scenes/GameState.tscn"
+
+[debug]
+
+shapes/collision/shape_color=Color( 0.611765, 0, 0.701961, 0.572549 )
+
+[display]
+
+window/size/width=160
+window/size/height=144
+window/size/test_width=480
+window/size/test_height=432
+window/stretch/mode="viewport"
+
+[gdnative]
+
+singletons=[ "res://addons/godot-git-plugin/git_api.gdnlib" ]
+
+[input]
+
+jump={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":90,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":88,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Stairs"
+2d_physics/layer_3="Enemies"
+2d_physics/layer_4="Whip"
+2d_physics/layer_20="Pickups"
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+2d/snapping/use_gpu_pixel_snap=true
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
+quality/dynamic_fonts/use_oversampling=false
+
+[world]
+
+2d/cell_size=16

@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Map Objects/Stair.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[node name="Stair" type="Area2D"]
+monitoring = false
+collision_layer = 2
+collision_mask = 2
+script = ExtResource( 1 )
+steps = 12
+direction = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="StartL" type="Node2D" parent="."]
+position = Vector2( -4, 4 )
+
+[node name="StartR" type="Node2D" parent="."]
+position = Vector2( 4, 4 )
